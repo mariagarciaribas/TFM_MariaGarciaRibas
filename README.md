@@ -195,11 +195,11 @@ kmerfinder.py \
 ### Alineamiento filogenético con ParSNP
 
 parsnp \
-    -r REF_genomes/10403S.fna \  # Genoma de referencia para la alineación
-    -d ST7 \  # Directorio con los genomas a analizar
-    -o ST7/ST7_parSNP \  # Directorio de salida donde se almacenarán los resultados
+    -r /PATH/TO/Genome_reference \  # Genoma de referencia para la alineación
+    -d /PATH/TO/INPUT/scaffolds \  # Directorio con los genomas a analizar
+    -o /PATH/TO/OUTPUT/parSNP \  # Directorio de salida donde se almacenarán los resultados
     -p 7 \  # Número de hilos utilizados para acelerar el análisis
-    -c \  # Habilita la alineación de genomas completos
+    -c \  # Elimina la recombinación
     -x  # Excluye secuencias muy divergentes del análisis
 
 ### Cálculo de las distancia con snp-dists
