@@ -1,4 +1,7 @@
+#!/bin/sh
+
 # Workflow para WGS
+
 
 ## 1. Control de calidad de las secuencias crudas mediante FastQC
 
@@ -10,8 +13,8 @@ multiqc .  # Para visulaizar todos los resultados de FastQC juntos
 ## 2. Limpieza y filtrado de secuencias con fastp
 
 fastp \
-    --thread 16 \  # Utiliza 16 hilos para acelerar el procesamiento
-    --verbose \  # Muestra información detallada durante la ejecución
+    --thread 16 \  
+    --verbose \  
     --in1 /PATH/TO/INPUT/SAMPLE_1.fq.gz \  # Archivo de entrada de lecturas forward
     --in2 /PATH/TO/INPUT/SAMPLE_2.fq.gz \  # Archivo de entrada de lecturas reverse
     --out1 /PATH/TO/OUTPUT/SAMPLE_fastp.1.fq.gz \  # Archivo de salida para lecturas forward después del procesamiento
